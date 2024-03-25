@@ -1,0 +1,25 @@
+{
+  "name": "task-manager-backend",
+  "version": "1.0.0",
+  "description": "Here’s a brief description:  Node.js: This is a JavaScript runtime built on Chrome’s V8 JavaScript engine. It’s used for building fast and scalable network applications. In our case, it’s the foundation of our Task Manager backend. Express.js: This is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications. It’s used in our Task Manager backend to create the API endpoints that our frontend will interact with. Task Management: The backend handles various task-related operations. These include creating a new task, fetching all tasks, updating a task by its ID, and deleting a task. Each task can have properties like ‘title’, ‘description’, ‘status’, etc. Database: The backend also interacts with a database (like MongoDB) to persist the task data. It uses an ORM/ODM (like Mongoose) to handle database operations. Middleware: Express.js middleware functions are used for handling requests, responses, and the next middleware in the application’s request-response cycle. These functions can perform tasks like authentication, validation, error handling, etc. Routes: The backend defines various routes (like /tasks, /tasks/:id, etc.) corresponding to different operations.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.2.3",
+    "nodemon": "^3.1.0",
+    "yup": "^1.4.0"
+  }
+}
