@@ -3,6 +3,7 @@ import cors from "cors";
 import connectDB from "./config/db.js";
 import dotenv from "dotenv";
 import userRoutes from "./routes/users.js";
+import taskRoutes from "./routes/tasks.js";
 
 const app = express();
 dotenv.config();
@@ -14,6 +15,7 @@ app.use(cors());
 
 // use routes
 app.use(userRoutes);
+app.use(taskRoutes);
 // connect Database
 await connectDB();
 

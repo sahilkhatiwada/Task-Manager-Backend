@@ -12,10 +12,24 @@ const taskSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
-    date: {
+    dueDate: {
       type: Date,
       required: true,
-      trim: true,
+    },
+    priority: {
+      type: String,
+      enum: ["low", "medium", "high"],
+      default: "low",
+    },
+    status: {
+      type: String,
+      enum: ["TO_DO", "IN-PROGRESS", "COMPLETED"],
+      required: true,
+    },
+    userId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
     },
   },
   {
