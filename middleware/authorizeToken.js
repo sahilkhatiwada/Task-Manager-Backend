@@ -5,7 +5,7 @@ const validateAccessToken = async (req, res, next) => {
   // extract the access token from the request header
   const authorization = req.headers.authorization;
 
-  const splittedToken = authorization?.split("  ");
+  const splittedToken = authorization?.split(" ");
   const token = splittedToken?.length === 2 ? splittedToken[1] : null;
 
   if (!token) {
